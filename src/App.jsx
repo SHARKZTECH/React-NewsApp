@@ -14,9 +14,11 @@ function App() {
      setNews(results);
   }
 
-    // getNews();
 
-    useEffect(()=>{setNews(NEWS)},[category])
+    useEffect(()=>{
+      // setNews(NEWS)
+          getNews();
+    },[category])
 
 
 
@@ -50,6 +52,7 @@ function App() {
         </Container>
         </Navbar>  
       <Row  xs={1} md={2} className="g-4">
+        {news.length < 1 && (<h3 className='text-center'>No news found!</h3>)}
       {news.map((n)=>(
             <Col>
             <Card style={{height:"20rem"}}>           

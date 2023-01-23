@@ -3,6 +3,8 @@
   padding: 2rem;
   text-align: center;
   background-color: rgb(20, 20, 65);
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 
