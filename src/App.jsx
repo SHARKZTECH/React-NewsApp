@@ -11,12 +11,13 @@ function App() {
   const getNews=async()=>{
     const res=await fetch(`https://newsdata.io/api/1/news?apikey=pub_1586642de0b2bce5a7b07f566bc69ce9cb7f5&country=ke&category=${category}`);
      const {results}=await res.json();
-     setNews(results);
+     setNews([...results]);
+     console.log(results)
   }
 
 
     useEffect(()=>{
-      // setNews(NEWS)
+      // setNews([...NEWS])
           getNews();
     },[category])
 
